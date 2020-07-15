@@ -5,36 +5,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  <title>Frontend Mentor | Fylo data storage component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
+  <title>Fylo data storage component</title>
 </head>
 
 <body>
+  <div class="container">
+    <div class="fylo">
+      <div class="logo-n-icons">
+        <div class="logo-name">
+          <img src="./images/logo.svg" alt="">
+        </div>
+        <div class="row">
+          <div class="icon-cont"><img src="./images/icon-document.svg" alt=""></div>
+          <div class="icon-cont"><img src="./images/icon-folder.svg" alt=""></div>
+          <div class="icon-cont"><img src="./images/icon-upload.svg" alt=""></div>
+        </div>
+      </div>
+    </div>
 
-  You’ve used 815 GB of your storage
-
-  185 GB Left
-
-  0 GB
-  1000 GB
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
+    <div class="storage-cont">
+      <div class="storage">
+        <div class="meter-container">
+          <p class="text">You’ve used <span class="used-data">815 GB</span> of your storage</p>
+          <div class="dataleft-top"><span class="dataleft">185</span> <span class="super">GB LEFT</span>
+          <div class="triangle-down"></div></div>
+          <div class="for-circle">
+            <meter value="815" min="0" max="1000">815</meter>
+            <div class="circle"></div>
+          </div>
+          <div class="measure row">
+            <span class="min-max">0 GB</span>
+            <span class="min-max">1000 GB</span>
+            <div class="dataleft-cont"><span class="dataleft">185</span> <span class="super">GB LEFT</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
