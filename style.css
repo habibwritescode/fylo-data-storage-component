@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background:  hsl(229, 57%, 11%) url('./images/bg-mobile.png') no-repeat fixed;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    margin: 80px auto;
+}
+
+.fylo{
+    height: 200px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px 90px 10px 10px;
+    margin-bottom: 15px;
+}
+
+.logo-n-icons{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 40px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon-cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    margin-right: 15px;
+    background-color: hsl(229, 57%, 11%);
+    padding: 25px;
+    border-radius: 10px;
+}
+
+
+.storage-cont{
+    height: 150px;
+    background-color: hsl(228, 56%, 26%);
+    border-radius: 10px;
+}
+
+.storage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    height: 50%;
+}
+
+.meter-container{
+    width: 80%;
+    position: relative;
+}
+
+.text{
+    font-size: 14px;
+    text-align: center;
+    color: hsl(243, 100%, 93%);
+}
+
+.used-data{
+    font-weight: 700;
+}
+
+.dataleft-top{
+    display: none;
+}
+
+.dataleft{
+    font-size: 40px;
+    color: hsl(229, 57%, 11%);
+    font-weight: 700;
+}
+
+.super{
+    vertical-align: super;
+}
+
+.for-circle{
+    position: relative;
+}
+
+meter{
+    height: 35px;
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+meter::-webkit-meter-bar{
+    background: none;
+    background-color: hsl(229, 57%, 11%);
+}
+
+meter::-webkit-meter-optimum-value {
+    background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    background-size: 100% 100%;
+}
+
+.circle{
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    opacity: 1;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.measure{
+    justify-content: space-between;
+    position: relative;
+}
+
+.min-max{
+    font-size: 13px;
+    color:  hsl(243, 100%, 93%);
+}
+
+.dataleft-cont{
+    font-size: 12px;
+    position: absolute;
+    background-color:  white;
+    margin: 0 auto;
+    width: 160px;
+    padding: 10px 10px;
+    top: 30px;
+    right: 40px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    body{
+        background:  hsl(229, 57%, 11%) url('./images/bg-desktop.png') no-repeat fixed;
+        background-position: bottom;
+        background-size: 100% 50%;
+    }
+    .container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: 100vh;
+    }
+    .fylo{
+        width: 35vw;
+        margin-right: 20px;
+    }
+    .storage-cont{
+        margin-top: 35px;
+        width:45vw;
+    }
+    .text{
+        text-align: start;
+    }   
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 992px) {
+    .fylo{
+        width: 25vw;
+    }
+    .storage{
+        margin-top: 40px;
+    }
+    .circle{
+        right: 80px;
+    }
+    
+    .dataleft-cont{
+        display: none;
+    }
+    
+    .dataleft-top{
+    display: block;
+    font-size: 12px;
+    position: absolute;
+    background-color:  white;
+    margin: 0 auto;
+    width: 160px;
+    padding: 10px 10px;
+    bottom: 80px;
+    right: 5px;
+    border-radius: 10px;
+    text-align: center;
+    }
+
+    .triangle-down {
+    position: absolute;
+	width: 0;
+    height: 0;
+    right: 0px;
+	border-left: 25px solid transparent;
+    border-top: 30px solid white;
+    }
+}
